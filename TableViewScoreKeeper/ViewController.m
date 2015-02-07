@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
+
 @end
 
 @implementation ViewController
@@ -28,6 +29,10 @@
     [self.tableView registerClass:[TextFieldTableViewCell class] forCellReuseIdentifier:@"cell"];
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+   
+    UIBarButtonItem *titleButton = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(cellForRowAtIndexPath:)];
+
+    self.navigationItem.rightBarButtonItem = titleButton;
 
 }
 

@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) UILabel *score;
 @property (nonatomic, strong) UIStepper *stepper;
+@property (nonatomic, strong) UINavigationItem *navigationItem;
 
 
 @end
@@ -41,9 +42,7 @@ static CGFloat topMargin = 8;
     [self.stepper addTarget:self action:@selector(stepperChanged:) forControlEvents:UIControlEventValueChanged];
 
     [self.contentView addSubview:self.stepper];
-    
-    
-    
+       
     
     return self;
     //.contentView
